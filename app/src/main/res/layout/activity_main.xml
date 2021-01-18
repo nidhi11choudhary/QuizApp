@@ -57,15 +57,31 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"/>
-           <EditText
-               android:layout_width="match_parent"
-               android:layout_height="wrap_content"
-               android:hint="Name"
-               android:textSize="22dp"/>
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+          <androidx.appcompat.widget.AppCompatEditText
+              android:id="@+id/name"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:hint="Name"
+              android:textColor="@color/textColor"
+              android:textColorHint="@color/textColor2"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <Button
+                android:id="@+id/submitName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Start"
+                android:textSize="25dp"
+                android:textStyle="bold"
+                android:paddingBottom="10dp"
+                android:paddingTop="10dp"
+                android:backgroundTint="#8A2BE2"
+                android:layout_marginTop="16dp"/>
 
         </LinearLayout>
-
 
     </androidx.cardview.widget.CardView>
 
