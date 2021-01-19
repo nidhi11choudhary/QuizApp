@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     tools:context=".FinalResult"
     android:gravity="center"
-    android:background="@color/finalresultbg"
+    android:background="@drawable/background"
     android:orientation="vertical">
 
     <TextView
@@ -18,12 +18,15 @@
         android:textColor="@color/white"
         android:textStyle="bold"
         android:gravity="center"
-        android:layout_marginBottom="30dp"/>
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"/>
 
     <pl.droidsonroids.gif.GifImageButton
+        android:id="@+id/image"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/giphy" />
+        android:src="@drawable/ic_trophy"
+        android:contentDescription="image" />
 
     <TextView
         android:id="@+id/congrats"
@@ -34,8 +37,7 @@
         android:textSize="30sp"
         android:textColor="@color/white"
         android:textStyle="bold"
-        android:gravity="center"
-        android:layout_marginBottom="30dp"/>
+        android:gravity="center" />
     <TextView
         android:id="@+id/userName"
         android:layout_marginTop="10dp"
@@ -44,8 +46,7 @@
         android:textSize="30sp"
         android:textColor="@color/white"
         android:textStyle="bold"
-        android:gravity="center"
-        android:layout_marginBottom="30dp"/>
+        android:gravity="center" />
 
     <TextView
         android:id="@+id/score"
@@ -54,8 +55,7 @@
         android:layout_height="wrap_content"
         android:textSize="20sp"
         android:textColor="@color/white"
-        android:gravity="center"
-        android:layout_marginBottom="30dp"/>
+        android:gravity="center" />
 
     <Button
         android:id="@+id/finishApp"

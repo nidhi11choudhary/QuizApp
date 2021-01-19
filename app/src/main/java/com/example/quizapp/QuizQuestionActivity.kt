@@ -86,15 +86,17 @@ class QuizQuestionActivity : AppCompatActivity(), View.OnClickListener {
            R.id.ans3->{selectedOptionView(ans3, 3)}
            R.id.ans4->{selectedOptionView(ans4, 4)}
            R.id.submitAns -> {
+
                if (mSelectedOptionPosition == 0) {
                    mCurrentPosition++
+                   Log.d("TAG", "mSelectedOptionPosition: $mSelectedOptionPosition ")
 
                    when {
                        mCurrentPosition <= mQuestionList!!.size -> {
                            setQuestion()
-                       }
+                         }
                        else -> {
-                           val intent = Intent(this, FinalResult :: class.java)
+                           val intent = Intent(this, FinalResult::class.java)
                            intent.putExtra(Constants.User_Name, userName)
                            intent.putExtra(Constants.Tatal_que, mQuestionList?.size)
                            intent.putExtra(Constants.Correct_Ans, correctAnsCount)
@@ -103,26 +105,25 @@ class QuizQuestionActivity : AppCompatActivity(), View.OnClickListener {
                        }
                    }
                } else {
-                   Log.d(
-                       "Mcurrent",
-                       "mCurrentPosition = $mCurrentPosition and mSelectedOptionPosition = $mSelectedOptionPosition"
-                   )
+                   Log.d("TAG", "mSelectedOptionPosition: $mSelectedOptionPosition ")
                    val question = mQuestionList?.get(mCurrentPosition - 1)
-                   Log.d("question!!.correctAns", "${question!!.correctAns}")
+
                    if (question!!.correctAns != mSelectedOptionPosition) {
                        onClickSubmit(mSelectedOptionPosition, R.drawable.wrong_ans_bg)
                    } else {
                        correctAnsCount++
                    }
+
                    onClickSubmit(question!!.correctAns, R.drawable.correct_ans_bg)
 
                    if (mCurrentPosition == mQuestionList!!.size) {
                        submitAns.text = "Finish"
-                      // Log.d("No of correct ans", "$correctAnsCount")
+                       // Log.d("No of correct ans", "$correctAnsCount")
                    } else
                        submitAns.text = "Go To Next Question"
                    mSelectedOptionPosition = 0
                }
+
            }
        }
 

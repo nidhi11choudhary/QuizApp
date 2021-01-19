@@ -25,11 +25,13 @@
             android:textColor="@color/textColor"
             android:textSize="25sp"/>
 
+
+
         <LinearLayout
             android:id="@+id/progressDetails"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="50dp"
+            android:layout_marginTop="20dp"
             android:gravity="center_vertical"
             android:orientation="horizontal">
 
@@ -54,7 +56,14 @@
                 android:textSize="14sp"
                 android:text="0/10"/>
         </LinearLayout>
-
+        <TextView
+            android:id="@+id/errormsg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:textStyle="bold"
+            android:textColor="@android:color/holo_red_dark"
+            android:textSize="15dp"/>
         <TextView
             android:id="@+id/ans1"
             android:layout_width="match_parent"
